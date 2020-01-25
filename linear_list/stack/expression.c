@@ -23,18 +23,36 @@ Type GetOp(char *Expr, int *start, char *str)
         return opr;
 }
 
+/*char Infix2Postfix(char * Expr)
+{
+    char str[MAXOP], output[MAXOP];
+    Stack S;
+    int start = 0;
+    int index = 0;
+
+    S = CreateStack(MAXOP);
+
+    while ((T=GetOp(Expr, &start, str))!=end || !IsEmpty)
+    {
+        if (T==num)
+            output[index] = ' ' + 
+
+    }
+
+}*/
+
 ElementType PostfixExp(char * Expr)
 {
     Stack S;
     Type T;
     ElementType Op1, Op2;
     char str[MAXOP];
-    int start;
+    int start = 0;
 
     S = CreateStack(MAXOP);
 
     Op1 = Op2 = 0;
-    while((T=GetOp(Expr, &start, str))!=end)
+    while ((T=GetOp(Expr, &start, str))!=end)
     {
         //printf("%s\n", str);
         if (T==num)
