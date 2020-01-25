@@ -1,3 +1,6 @@
+/*
+    This file is the struct of list.
+*/
 #define MAXSIZE 1000
 typedef int ElementType;
 typedef int Position;
